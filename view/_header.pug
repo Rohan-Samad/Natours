@@ -1,0 +1,17 @@
+header.header 
+    a(href="/overview" class="font-bold").name Natours 
+    div(class="btn flex justify-center items-center")
+       
+        if(user)
+            button(id="logout-Btn").log.sbtn logout 
+            a(href=`/users/${user._id}`) 
+                if(user.photo)
+                    img(class="mx-3" src=`/img/users/${user.photo}`).sign.header_img
+                else    
+                     img( src="https://png.pngtree.com/png-vector/20191101/ourlarge/pngtree-cartoon-color-simple-male-avatar-png-image_1934459.jpg").sign.header_img
+            div=  user.name.split(" ")[0]
+        else
+            a(href="/users/signup").log.sbtn Signup 
+            a(href="/users/login").sign.sbtn login
+
+hr        

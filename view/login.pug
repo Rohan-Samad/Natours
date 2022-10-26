@@ -1,0 +1,22 @@
+extends base
+
+block content 
+    div.mainBox.flex.justify-center.items-center
+        div(class="signupBox my-16 p-12")
+            h2(class="my-3 font-bold text-green-500") Login to Your Account 😊
+            p(class="my-3 text-sm text-gray-800" id="errBox") Enjoy fresh new Tours 
+                form.login-form 
+                  
+                    div(class="input")
+                        div Email
+                        input(class=" inputVal " type="text" id="lemail" placeholder="Enter you Email here")
+                    div(class="input")
+                        div.flex.justify-between
+                            div Password
+                            button( id="forgetPassBtn"  type="button" class="mx-2 outline-none text-sm").text-cyan-500 Forget The password
+                        input(class="inputVal " type="password" id="lpass" placeholder="Enter you password here")
+                   
+
+                    
+                    a(href="/users/signup" class="text-cyan-500 text-sm font-underline") Doesn't haven't an account click to make one!
+                    button(class="block sbtn  mt-9 bg-green-500  cursor-pointer" type="submit") Login

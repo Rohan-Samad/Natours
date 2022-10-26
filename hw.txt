@@ -1,0 +1,15 @@
+Start
+Input numbers n0;
+set n0 to large 5;
+set n1 to n0*1;
+set n2 to n0*2;
+set n3 to n0*3;
+set n4 to n0*4;
+set n5 to n0*5;
+set n6 to n0*6;
+set n7 to n0*7;
+set n8 to n0*8;
+set n9 to n0*9;
+set n10 to n0*10;
+output n1,n2,n3,n4,n5,n6,n7,n8,n9,n10;
+end;

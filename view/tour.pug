@@ -1,0 +1,76 @@
+extends base
+mixin propslisting(name,value)
+    div(class="flex mx-auto")
+        div(class="props_duration m-3 font-bold text-white ")=name
+        div(class="props_value m-3 flex font-bold px-2 rounded-lg text-green-700")=value
+
+mixin ratingbox(name,pic,rating,review)
+    div(class="review-cont-box w-72" )
+        div(class="imgBox flex items-center ")
+            img( class="review-author-pic" src=`/img/users/${pic}`)
+            div(class="name ml-2")=name 
+        div(class="review mt-3 flex flex-col justify-center")
+            div(class="reviewText text-sm")=review 
+            div(class="stars flex m-auto mt-3")
+                each trating in [1,2,3,4,5]
+                    i(class=`fa-regular fa-star ${rating>=trating?'text-green-500':'text-grey-300'}`)
+
+
+block content 
+    div(class="i w-full h-[400px] flex justify-center mt-6 items-center  relative" )
+        img(class="absolute timg" src=`${tour.imageCover}`, alt="Error 404")    
+        -let tourId = JSON.stringify(tour._id)
+            -if(user)
+                div(class="star mr-3 absolute top-3 right-3" onClick=`selectFav(${tourId})`)
+                    i(class=`fa-solid fa-heart text-3xl ${isFav?"text-red-500":"text-green-500"}`)
+        div(class="text-4xl text-white tname")=tour.name
+    div(class="flex flex-row lg:flex-row ")
+        div(class="info flex flex-col justify-center align-center  bg-green-400 p-3 h-[400px] w-[50vw]")
+            div(class="props flex flex-col")
+                h1(class=" text-3xl font-bold m-auto items-center justify-center text-white") Statics of Tour
+                +propslisting("Duration ",`${tour.duration} days`)
+                +propslisting("People ",`${tour.maxGroupSize}`)
+                +propslisting("Difficulty ",`${tour.difficulty}`)
+                +propslisting("Ratings",`${Math.round(tour.ratingsAverage*10)/10}`)
+            
+        div(class="summary flex flex-col p-4 sm:w-[100%] lg:w-[50%] bg-white justify-center ")
+            h1(class="text-green-600 my-2 font-bold mx-auto ") Summary of  the Tour 
+            p(class="text-grey-700 mx-auto")=tour.summary    
+            p(class="text-grey-700 mx-auto")=tour.description    
+
+    -if(tour.reviews.length!==0) 
+        div(class="ratingBox mt-24 flex-col justify-center")
+            div(class="reviewsheading mx-48 font-bold") Best Reviews of Great people
+            div(class="flex")
+                -if(tour.reviews.length>0)    
+                    each review in tour.reviews
+                        +ratingbox(review.user.name,review.user.photo,review.rating,review.review)
+
+    div(class="tour-logging-in relative m-auto flex justify-center items-center my-24")
+        div(class="tour-loggingin-box flex " )
+            div(class="imgoftour  rounded-full relative")
+                img( class="w-[100px] h-[100px] rounded-full" src=tour.imageCover, alt="error04")
+            if(isBooked)
+                div(class="text bookingTexts px-[55px]") Welcome You Had Already Booked This Tour
+            else
+                div(class="text bookingTexts px-[55px]") So What are Waiting for Click here for booking 
+            
+            if(isBooked)
+                button(name=`${tour._id}` class="sbtn w-[100px] h-[100px]  rounded-full relative bookingbtn") Booked by you!
+            else 
+                if(user)
+                    button(name=`${tour._id}` id="bookingBtn" class="sbtn w-[100px] h-[100px]  rounded-full relative bookingbtn") Click to Booking
+                else    
+                    a(href="/users/login" class="sbtn w-[100px] h-[100px] flex items-center justify-center rounded-full relative bookingbtn") Login to Book Tour
+    if(user && isBooked)
+        div(class="review-Box w-full flex justify-content items-content flex-col my-4 mb-16") 
+            div(class="m-auto createReveiwBox border-1 border-gray-800 w-72 rounded-lg p-6") Give a review and rating to #{tour.name} 
+                div(class="starBox")
+                    div(class="stars flex m-auto mt-3 mb-3")
+                        each trating in [1,2,3,4,5]
+                            i(class=`fa-regular fa-star text-grey-300 ratingStars` onClick=`starBox(${trating})`)
+                div(class="textBox my-2")
+                    input(type="text" class="border-2  border-gray-500 p-2 w-56 rounded-lg" id="RTB" placeholder="Give a perfect review")
+                button(class="my-2 sbtn bg-green-500" name=`${tour._id}` id="reviewBtn") Submit Review 
+
+          

@@ -1,0 +1,22 @@
+extends base
+
+block content 
+    div.mainBox.flex.justify-center.items-center
+        div(class="signupBox my-16 p-12")
+            h2(class="my-3 font-bold text-green-500") Reset Your Password 😊
+            p(class="my-3 text-sm text-gray-800" id="errBox") Reset Your Password 
+                form.forgotPass-form 
+                  
+                    div(class="input")
+                        div Enter New Password
+                        input(class=" inputVal " type="password" id="fpass" placeholder="◾◾◾◾◾◾◾◾")
+                    div(class="in")
+                        div
+                            div Confirm New Password
+                            //- button(id="forgetPassBtn").text-cyan-500 Forget Password !
+                        input(class="inputVal " type="password" id="fcpass" placeholder="◾◾◾◾◾◾◾◾")
+                   
+
+                    
+                    //- a(href="/users/signup" class="text-cyan-500 text-sm font-underline") Doesn't haven't an account click to make one!
+                    button(class="block sbtn  mt-9 bg-green-500  cursor-pointer" type="submit") Save Settings

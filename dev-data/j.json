@@ -1,0 +1,189 @@
+{
+  "status": "success",
+  "tour": {
+    "startLocation": [
+      {
+        "type": "Point",
+        "description": "Aspen, USA",
+        "coordinates": [-106.822318, 39.190872],
+        "address": "419 S Mill St, Aspen, CO 81611, USA",
+        "_id": "63344a1f782b05fd0ac473fa"
+      }
+    ],
+    "_id": "5c88fa8cf4afda39709c295a",
+    "name": "The Snow Adventurer",
+    "price": 997,
+    "duration": 4,
+    "maxGroupSize": 10,
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 6,
+    "difficulty": "difficult",
+    "guides": [
+      "633447ffde5c324dd09288fc",
+      "633448a3de5c324dd0928900",
+      "633448b7de5c324dd0928902"
+    ],
+    "locations": [
+      {
+        "type": "Point",
+        "description": "Aspen Highlands",
+        "coordinates": [-106.855385, 39.182677],
+        "day": 1,
+        "_id": "5c88fa8cf4afda39709c295c"
+      },
+      {
+        "type": "Point",
+        "description": "Beaver Creek",
+        "coordinates": [-106.516623, 39.60499],
+        "day": 2,
+        "_id": "5c88fa8cf4afda39709c295b"
+      }
+    ],
+    "summary": "Exciting adventure in the snow with snowboarding and skiing",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "imageCover": "tour-3-cover.jpg",
+    "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
+    "priceDiscount": 0,
+    "createdAt": "2022-09-28T13:20:31.367Z",
+    "startDates": [
+      "2022-01-05T10:00:00.000Z",
+      "2022-02-12T10:00:00.000Z",
+      "2023-01-06T10:00:00.000Z"
+    ],
+    "__v": 0,
+    "Retime": [8387966281],
+    "reviews": [
+      {
+        "_id": "6335841d4861476f772da40d",
+        "review": "Love it",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "6335841d4861476f772da40d"
+      },
+      {
+        "_id": "633584234861476f772da40f",
+        "review": "Love it",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "633584234861476f772da40f"
+      },
+      {
+        "_id": "633584234861476f772da411",
+        "review": "Love it",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "633584234861476f772da411"
+      },
+      {
+        "_id": "633584875b7ffc856497c05e",
+        "review": "OHH my god",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "633584875b7ffc856497c05e"
+      },
+      {
+        "_id": "6335880ad812f732ef6fa855",
+        "review": "OHH my god",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "6335880ad812f732ef6fa855"
+      },
+      {
+        "_id": "633588cd495c7011da3f2f07",
+        "review": "OHH my god",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "633588cd495c7011da3f2f07"
+      },
+      {
+        "_id": "6336d1a3ec2b7faf07965604",
+        "review": "OHH my god",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "6336d1a3ec2b7faf07965604"
+      },
+      {
+        "_id": "6336d514f7f8c40236600840",
+        "review": "OHH my god",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "6336d514f7f8c40236600840"
+      },
+      {
+        "_id": "6336d515f7f8c40236600842",
+        "review": "OHH my god",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "6336d515f7f8c40236600842"
+      },
+      {
+        "_id": "6336d516f7f8c40236600844",
+        "review": "OHH my god",
+        "rating": 3,
+        "user": {
+          "_id": "633448b7de5c324dd0928902",
+          "name": "Rohan Samad",
+          "photo": "https://i.pinimg.com/736x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
+        },
+        "tour": "5c88fa8cf4afda39709c295a",
+        "__v": 0,
+        "id": "6336d516f7f8c40236600844"
+      }
+    ],
+    "id": "5c88fa8cf4afda39709c295a"
+  }
+}

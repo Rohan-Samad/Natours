@@ -1,0 +1,22 @@
+extends base
+
+mixin reviewBox(name,pic,rating,review,tour,link)
+    div(class="review-cont-box w-[65vw]" )
+        div.flex.justify-between.w-full.items-center
+            div(class="imgBox flex items-center ")
+                img( class="review-author-pic" src=`/img/users/${pic}`)
+                div(class="name ml-2")=name 
+            a(href=`/tour/${link}` class="tourName mr-2 text-green-500 font-bold")=tour
+        div(class="review mt-3 flex flex-col justify-center")
+            div(class="reviewText text-sm")=review 
+            div(class="stars flex m-auto mt-3")
+                each trating in [1,2,3,4,5]
+                    i(class=`fa-regular fa-star ${rating>=trating?'text-green-500':'text-grey-300'}`)
+
+block content 
+   div(class="flex w-[98vw] mt-16 flex-wrap justify-around")
+        -if(reviews.length===0)
+            div(class="text-green-500 text-3xl m-auto my-48 ") There's no Reviews
+        -else 
+            each review in reviews 
+                +reviewBox(review.user.name,review.user.photo,review.rating,review.review,review.tour.name,review.tour._id)

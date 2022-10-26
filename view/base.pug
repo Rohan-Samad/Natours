@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title  Natours
+        link(rel="stylesheet", href="/style.css")
+        link(rel="stylesheet", href="/main.css")
+        link(rel="stylesheet", href="/dist/output.css")
+        
+
+        link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+        link(rel="manifest" href="/site.webmanifest")
+        link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+
+
+        script(src="https://kit.fontawesome.com/25f4039ae0.js" crossorigin="anonymous")
+        //- script(src="https://cdn.tailwindcss.com")
+        script(src="https://js.stripe.com/v3/")
+        script(src="https://cdn.tailwindcss.com")
+    body 
+        // header
+        include _Alert
+        include _header
+        // Main Container
+        block content 
+            h1= tour 
+        // Footer
+        include _footer
+        //- script(src="./") 
+        script(src="https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js")
+        script(src="/pugController.js")  

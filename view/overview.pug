@@ -1,0 +1,31 @@
+extends  base
+
+block content
+
+    div(class="flex w-[98vw] mt-16 flex-wrap justify-around")
+        -if(tour.length===0)
+            div(class="text-green-500 text-3xl m-auto my-48 ") There's no Tour
+        -else    
+            each  tours in tour
+
+                div(class="Box m-2  rounded-lg border-2 pb-5 border-2px border w-[16.5rem] mb-28")
+                    div.relative 
+                        img(
+                        class="fCont w-[16.5rem] h-32 m-auto rounded-lg  bg-blend-darken  relative p-2 text-center flex justify-center rounded-lg border-2 border-white"
+                        src=(`${tours.imageCover}`))
+                        div(class="Name py-1 px-2 rounded-lg text-white font-bold  text-2xl absolute bottom-0 m-auto text-center"
+                          style=({ backgroundColor: " #21b32154;" })) #{tours.name}
+                    div.p-4      
+                        div(class="p-2 ")
+                            div( class="prop text-[12px] grid font-semibold grid-cols-2 flex justify-between items-center") #{tours.duration} days
+                        div( class="ratings flex text-[15px]  my-2 items-center") Ratings :
+                            div( class="bg-green-500 text-white px-1 py-2 rounded-lg mx-1") #{Math.round(tours.ratingsAverage*10)/10}
+                        div( class="difficulty flex my-2 items-center")    Difficulity :
+                            div( class="bg-green-500 text-[12px]  text-white px-1 py-2 rounded-lg mx-1") #{tours.difficulty}
+                        div( class="Rquaninty flex my-2  items-center") Reviews :
+                            div( class="bg-green-500 text-[12px]  text-white px-1 py-2 rounded-lg mx-1") #{tours.ratingsQuantity}
+                        div( class="price flex my-4 font-semibold") Price :
+                            div(class="font-bold mx-2") #{tours.price} $
+                        div( class="summary text-sm font-semibold") #{tours.summary}   
+                    div.flex.justify-between.items-center
+                        a( class="bg-green-500 mx-5 rounded-lg px-2 py-1 text-white font-semiBold my-5" href=`/tour/${tours._id}`) Details

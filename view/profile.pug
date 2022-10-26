@@ -1,0 +1,26 @@
+extends base
+mixin optBox(link,name)
+    a(href=link class="cursor-pointer settings flex justify-center w-max  py-1 px-2")=name
+block content 
+    div(class="mainBox w-[70vw] m-16 flex items-center justify-center")
+        div(class="user-properties bg-green-500 text-white")
+            div(class="options py-6 px-2")
+                +optBox(`/users/${user._id}`,"SETTINGS") 
+                +optBox("/users/booking"," MY BOOKINGS") 
+                +optBox("/users/reviews","MY REVIEWS") 
+                +optBox("/users/favourite-Tours","My Favourite Tours") 
+             
+        div(class="account w-[60vw] flex flex-col justify-center items-center")
+            form.form(class="updateForm")
+                h1(class="text-green-500 my-3 text-xl m-auto") Your Account Settings
+                p.mx-auto.text-gray-600 Update Your Account
+                p.mx-auto.text-gray-600= user.email
+                div.flex.flex-col.mt-8.text-gray-600  Change Your Name 
+                    input(type="text" id="user-profile-name" class="border-2  border-gray-500 p-2 w-56 rounded-lg" placeholder=`${user.name}`)
+                div(class="flex my-8") 
+                    img(class="mx-3 w-[100px] rounded-full" src=`/img/users/${user.photo}`)
+                    button(id="changeProfileImg" class="changeProfileImg mx-3 px-[13px]") Change the Picture
+                    input(type="file" id="fileinput" class="changeProfileImg mx-3 px-[13px] hidden" placeholder="Change The Picture") 
+                button(class="sbtn bg-green-500 my-8 float-right" type="submit") Submit
+                
+                    

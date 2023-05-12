@@ -1,1 +1,4 @@
-
+[[plugins]]
+  package = "netlify-plugin-run"
+  [plugins.inputs]
+    command = "npm run"

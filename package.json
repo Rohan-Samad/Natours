@@ -4,7 +4,6 @@
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "netlify-plugin-run": "^1.0.1",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
@@ -37,6 +36,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.12", 
+    "netlify-plugin-inline-functions-env": "^0.0.5",
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^15.0.0",

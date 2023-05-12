@@ -29,7 +29,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node ./server.js",
+    "build": "npm run build:html && npm run build:css && npm run build:js",
+    "build:html": "pug src --out dist --pretty",
+    "build:css": "node-sass src/styles/main.scss dist/styles/main.css",
+    "build:js": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
